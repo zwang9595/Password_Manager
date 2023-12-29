@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+*.sh linguist-detectable=false
+*.bat linguist-detectable=false
+*.ps1 linguist-detectable=false
