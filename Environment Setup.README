@@ -1,0 +1,17 @@
+# Install xcode command tools
+xcode-select --install
+
+# Homebrew installation
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+(echo; echo 'eval "$(/usr/local/bin/brew shellenv)"') >> /Users/$USER/.zprofile
+eval "$(/usr/local/bin/brew shellenv)"
+
+# Java openjdk installation
+Brew install openjdk
+sudo ln -sfn /usr/local/opt/openjdk/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
+echo 'export PATH="/usr/local/opt/openjdk/bin:$PATH"' >> ~/.zshrc
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+# SSH password tool installation
+brew install hudochenkov/sshpass/sshpass
